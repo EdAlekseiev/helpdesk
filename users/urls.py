@@ -6,6 +6,7 @@ from users import views
 
 router = routers.SimpleRouter()
 router.register("clients", views.ClientViewSet)
+router.register("operators", views.OperatorViewSet)
 
 urlpatterns = [path("", include(router.urls))]
 
