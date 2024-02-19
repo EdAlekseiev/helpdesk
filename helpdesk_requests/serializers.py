@@ -22,7 +22,9 @@ class BaseRequestSerializer(serializers.ModelSerializer):
         """
 
         if not value.is_client:
-            raise serializers.ValidationError("This user can't initiate new request")
+            raise serializers.ValidationError(
+                "This user can't initiate new request",
+            )
 
         return value
 
@@ -32,7 +34,9 @@ class BaseRequestSerializer(serializers.ModelSerializer):
         """
 
         if not value.is_operator:
-            raise serializers.ValidationError("This user can't process request")
+            raise serializers.ValidationError(
+                "This user can't process request",
+            )
 
         return value
 

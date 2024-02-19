@@ -27,4 +27,3 @@ class Request(models.Model):
         on_delete=models.SET_NULL,
         related_name="processed_tickets",
     )
-

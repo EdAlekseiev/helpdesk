@@ -10,4 +10,3 @@ class DjangoModelPermissions(BaseDjangoModelPermissions):
             "GET": ["%(app_label)s.view_%(model_name)s"]
         },
     }
-
