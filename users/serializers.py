@@ -45,9 +45,54 @@ class ClientSerializer(serializers.ModelSerializer):
         return data
 
     def create(self, validated_data):
+        password = validated_data.pop("password")
         client = super().create(validated_data)
         # Add group Client to user
         client_group = Group.objects.get(name=constants.CLIENT_GROUP_NAME)
         client.groups.add(client_group)
+        client.set_password(password)
+        client.save()
 
         return client
+
+class OperatorSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True)
+
+    class Meta:
+        model = User
+        fields = (
+            "username",
+            "password",
+            "first_name",
+            "last_name",
+        )
+        extra_kwargs = {
+            "first_name": {"required": True},
+            "last_name": {"required": True},
+            "username": {
+                "required": True,
+                "validators": [
+                    UniqueValidator(queryset=User.objects.all())
+                ]
+            },
+        }
+
+    def create(self, validated_data):
+        password = validated_data.pop("password")
+        operator = super().create(validated_data)
+        # Add group Operator to user
+        operator_group = Group.objects.get(name=constants.OPERATOR_GROUP_NAME)
+        operator.groups.add(operator_group)
+        operator.set_password(password)
+
+        return operator
+
+
+class UserInnerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = (
+            "id",
+            "first_name",
+            "last_name",
+        )

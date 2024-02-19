@@ -40,9 +40,11 @@ INSTALLED_APPS = [
 
     # 3th-party  apps
     "phone_field",
+    "rest_framework_simplejwt",
 
     # Helpdesk apps
     "users",
+    "requests",
 ]
 
 MIDDLEWARE = [
@@ -154,4 +156,10 @@ LOGGING = {
             "handlers": ["console"]
         },
     },
+}
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    )
 }

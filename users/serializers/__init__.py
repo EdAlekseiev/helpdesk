@@ -1,2 +1,0 @@
-from .client_serializers import ClientSerializer
-from .operator_serializer import OperatorSerializer
