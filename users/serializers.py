@@ -55,6 +55,7 @@ class ClientSerializer(serializers.ModelSerializer):
 
         return client
 
+
 class OperatorSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
 

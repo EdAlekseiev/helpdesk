@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
     # Helpdesk apps
     "users",
-    "requests",
+    "helpdesk_requests",
 ]
 
 MIDDLEWARE = [
@@ -85,7 +85,7 @@ WSGI_APPLICATION = "helpdesk.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": BASE_DIR / "db1.sqlite3",
     }
 }
 

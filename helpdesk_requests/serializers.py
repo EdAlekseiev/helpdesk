@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from requests.models import Request
+from helpdesk_requests.models import Request
 from users.models import User
 from users.serializers import UserInnerSerializer
 

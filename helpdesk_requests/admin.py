@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from requests.models import Request
+from helpdesk_requests.models import Request
 
 
 @admin.register(Request)

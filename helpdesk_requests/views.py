@@ -3,8 +3,8 @@ from rest_framework import viewsets
 
 from helpdesk.permissions import DjangoModelPermissions
 from users.permissions import IsClientPermission, IsOperatorPermission
-from requests.models import Request
-from requests.serializers import (
+from helpdesk_requests.models import Request
+from helpdesk_requests.serializers import (
     CreateClientRequestSerializer,
     CreateOperatorRequestSerializer,
     ReadRequestSerializer,
