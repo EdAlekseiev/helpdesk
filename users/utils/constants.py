@@ -1,0 +1,2 @@
+CLIENT_GROUP_NAME = "Client"
+OPERATOR_GROUP_NAME = "Operator"

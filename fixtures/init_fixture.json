@@ -1,0 +1,106 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$Fx4fVTZQEIFz72CstWPTmB$9BX+lxFhcrlbBe3JP2uDSdCp5W4c/fKoi2iRqJe/7M4=",
+      "last_login": "2024-02-18T19:09:59.457Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Eduard",
+      "last_name": "Alekseev",
+      "email": "admin@admin.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-02-18T12:11:20Z",
+      "phone": "0682389705, press 380",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$Fx4fVTZQEIFz72CstWPTmB$9BX+lxFhcrlbBe3JP2uDSdCp5W4c/fKoi2iRqJe/7M4=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "0666666601",
+      "first_name": "Test",
+      "last_name": "Client",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-02-18T18:47:09.843Z",
+      "phone": "0666666601",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$Fx4fVTZQEIFz72CstWPTmB$9BX+lxFhcrlbBe3JP2uDSdCp5W4c/fKoi2iRqJe/7M4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "0666666602",
+    "first_name": "Test",
+    "last_name": "Client2",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-02-18T18:47:09.843Z",
+    "phone": "0666666602",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$Fx4fVTZQEIFz72CstWPTmB$9BX+lxFhcrlbBe3JP2uDSdCp5W4c/fKoi2iRqJe/7M4=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "test_operator",
+      "first_name": "Test",
+      "last_name": "Operator",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-02-18T18:54:41.689Z",
+      "phone": null,
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "helpdesk_requests.request",
+    "pk": 1,
+    "fields": {
+      "body": "Test1",
+      "status": "completed",
+      "initiator": 2,
+      "processed_by": 4
+    }
+  },
+  {
+    "model": "helpdesk_requests.request",
+    "pk": 2,
+    "fields": {
+      "body": "Test2",
+      "status": "pending",
+      "initiator": 3,
+      "processed_by": null
+    }
+  }
+]
